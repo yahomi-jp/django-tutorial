@@ -11,9 +11,10 @@
 
 このドキュメントを進める上で、理解が進んだ部分や認識が変わった箇所をピックアップしていく項目<br>
 
-- <span style="color: green; ">django-exten"s"ions</span>であり、<span style="color: red; ">django-exten"t"ions</span>ではない
+- <span style="color: green; ">django-exten"s"ions</span>であり、
+<span style="color: red; ">django-exten"t"ions</span>ではない
+- 外部キーを参照する際の[AAA.BBB_id]はBBBのモデルを参照して、そこからidを参照しているのではなく、AAAのモデルだけを参照している。（[AAA."BBB_id"]っていうイメージ）
 - 
-
 
 # 参考 URL
 
