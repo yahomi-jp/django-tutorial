@@ -4,9 +4,9 @@ from django.http import HttpResponse, Http404
 # Create your views here.
 
 def index(request):
-    question = Question.objects.order_by('-pub_date')[:5]
+    latest_question_list = Question.objects.order_by('-pub_date')[:5]
     context = {
-        'question': question
+        'latest_question_list': latest_question_list
     }
     return render(request, 'polls/index.html', context)
 
