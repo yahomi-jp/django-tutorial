@@ -34,6 +34,7 @@
     }
     return render(request, 'wakes/top.html', context)
   ```
+  このビューでしっかりHttpResponseが返っている
 - 以前は、```wakes = Wake.objects.all()order_by('-id')```で取得していたが、<br>```wakes = Wake.objects.order_by('-id')```でいけるっぽい。
 - 
 
