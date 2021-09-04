@@ -11,8 +11,9 @@
 
 このドキュメントを進める上で、理解が進んだ部分や認識が変わった箇所をピックアップしていく項目<br>
 
-- <span style="color: green; ">django-exten"s"ions</span>
-  であり、<span style="color: red; ">django-exten"t"ions</span>ではない
+- <span style="color: green; ">django-exten"s"ions</span>であり、<span style="color: red; ">django-exten"t"ions</span>ではない
+- 
+
 
 # 参考 URL
 
