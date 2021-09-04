@@ -36,8 +36,20 @@
   ```
   このビューでしっかりHttpResponseが返っている
 - 以前は、```wakes = Wake.objects.all()order_by('-id')```で取得していたが、<br>```wakes = Wake.objects.order_by('-id')```でいけるっぽい。
+- 特定のオブジェクトを取得、もし存在しなかった場合の例外処理を書くビューは<br>
+  ```
+  try:
+        wake = Wake.objects.get(pk=wake_id)
+    except Wake.DoesNotExist:
+        raise Http404("該当するWakeがありません")
+  ```
+  では長い。こちらも実装するためのショートカットが提供されている。<br>
+  それがget_object_or_404<br>
+  ```
+  wake = get_object_or_404(Wake, pk=wake_id)
+  ```
+  オブジェクトが存在しない場合、Http404を返す
 - 
-
 # 参考 URL
 
 [Django 公式ドキュメントのチュートリアル](https://docs.djangoproject.com/ja/3.2/intro/tutorial01/)
