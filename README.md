@@ -51,7 +51,7 @@
         raise Http404("該当するWakeがありません")
   ```
   では長い。こちらも実装するためのショートカットが提供されている。<br>
-  それがget_object_or_404<br>
+  それがget_object_or_404()<br>
   ```
   wake = get_object_or_404(Wake, pk=wake_id)
   ```
@@ -63,7 +63,26 @@
 
 - try, exceptで例外処理を行う際、正常終了時に行う処理はその後のelseで記述する
 
+- render, redirect, HttpResponseRedirectについて。
+  - 関数ビューを使っているとよく目にするのがrender.
+    ```return render(request, 'member.html', context)```
+    contextに辞書型のオブジェクトをつっこむ。
+    指定のTemplateにcontextを混ぜ込んで描画(render)する。
+    userに関しては、requestに含まれているので、```{{ user.is_authenticated }}```などはcontextにuserを含ませずに実装が可能。
+  
+  - 訪問者をページへ飛ばすときに使うのがredirect。
+    renderとは違い、そのurl先で読み込み処理を行う。
+    POSTなどの情報を一度リセットしてからまっさらな状態で描画されるので、renderと使い分けることが重要。
+  
+  - HttpResponseRedirectについて。
+    基本的にredirectとの差はないが、１つ大きな違いが存在する。
+    それは、アプリ間を行き来することができる点である。
 
+
+# 新しく学んだ概念、技術
+- render()を使わないvanillaの実装方法
+- get_object_or_404()を使わないvanillaの実装方法
+- 自動テスト
 
 # 参考 URL
 
