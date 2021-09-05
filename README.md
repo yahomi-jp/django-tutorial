@@ -63,6 +63,7 @@
 
 - try, exceptで例外処理を行う際、正常終了時に行う処理はその後のelseで記述する
 
+
 - render, redirect, HttpResponseRedirectについて。
   - 関数ビューを使っているとよく目にするのがrender.
     ```return render(request, 'member.html', context)```
@@ -78,8 +79,14 @@
     基本的にredirectとの差はないが、１つ大きな違いが存在する。
     それは、アプリ間を行き来することができる点である。
 
-  - editの過去形はeditedである。edittedではない汗
 
+- editの過去形はeditedである。edittedではない汗
+
+
+- テストは大事、テストのないコードは、デザインとして壊れている.
+
+
+- 
 
 # 新しく学んだ概念、技術
 - render()を使わないvanillaの実装方法
