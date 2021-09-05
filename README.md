@@ -58,7 +58,13 @@
   オブジェクトが存在しない場合、Http404を返す
 
 
-- 
+- request.POSTの値は常に文字列。
+
+
+- try, exceptで例外処理を行う際、正常終了時に行う処理はその後のelseで記述する
+
+
+
 # 参考 URL
 
 [Django 公式ドキュメントのチュートリアル](https://docs.djangoproject.com/ja/3.2/intro/tutorial01/)
