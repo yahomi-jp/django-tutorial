@@ -12,8 +12,11 @@
 このドキュメントを進める上で、理解が進んだ部分や認識が変わった箇所をピックアップしていく項目<br>
 
 - django-exten"s"ionsであり、django-exten"t"ionsではない
+
+
 - 外部キーを参照する際の[AAA.BBB_id]はAAAのモデルだけを参照している（[AAA."BBB_id"]っていうイメージ）。BBBのモデルを参照して、そこからidを参照しているのではない。
-- ページ遷移は```<a href="/aaa/bbb/{{ ccc.id }}/">```で渡せばよい。この前ページ専用のViewを書いていた自分を殴りたい。
+
+
 - テンプレートを表示させるビュー、
   ```
     def top(request):
@@ -35,7 +38,11 @@
     return render(request, 'wakes/top.html', context)
   ```
   このビューでしっかりHttpResponseが返っている
+
+
 - 以前は、```wakes = Wake.objects.all()order_by('-id')```で取得していたが、<br>```wakes = Wake.objects.order_by('-id')```でいけるっぽい。
+
+
 - 特定のオブジェクトを取得、もし存在しなかった場合の例外処理を書くビューは<br>
   ```
   try:
@@ -49,6 +56,8 @@
   wake = get_object_or_404(Wake, pk=wake_id)
   ```
   オブジェクトが存在しない場合、Http404を返す
+
+
 - 
 # 参考 URL
 
