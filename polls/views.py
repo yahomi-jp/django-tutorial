@@ -6,7 +6,8 @@ from django.urls import reverse
 from django.views.generic import ListView, DetailView
 # Create your views here.
 
-class ModelListView(ListView):
+
+class IndexView(ListView):
     template_name = "polls/index.html"
     context_object_name = 'latest_question_list'
 
