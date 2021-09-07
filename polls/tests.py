@@ -11,7 +11,6 @@ from .models import Question
 # Create your tests here.
 
 class QuestionModelTests(TestCase):
-
     def test_was_published_recently_with_future_question(self):
         """
         was_pubulished_recently() returns False for questions whose pub_date is in the future.
