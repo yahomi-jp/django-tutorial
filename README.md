@@ -88,16 +88,13 @@
   
   - 制約を持たせる処理などはmodelに関数で書くことでメソッドとして後で呼び出すと良い
 
-  - 
+  - テストは冗長になっても大丈夫
+
 
 - ```filter(field__lte=5)```はフィールドの値が10以上のものだけを取得する
 
-# 新しく学んだ概念、技術
-- render()を使わないvanillaの実装方法
-- get_object_or_404()を使わないvanillaの実装方法
-- 自動テスト
-  - setup_test_environment()
-  - Client
+- 
+
 
 
 # 参考 URL
