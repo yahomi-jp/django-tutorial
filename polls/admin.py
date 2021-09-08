@@ -3,9 +3,9 @@ from django.db import models
 from .models import Question, Choice
 # Register your models here.
 
-class ChoiceInline(admin.StackedInline):
+class ChoiceInline(admin.TabularInline):
     model = Choice
-    extra = 3
+    extra = 1
 
 
 class QuestionAdmin(admin.ModelAdmin):
